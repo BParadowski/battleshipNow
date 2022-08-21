@@ -1,0 +1,70 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  font-size: 45px;
+  margin-bottom: 120px;
+}
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.board {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 400px;
+  width: 400px;
+  outline: 20px solid rgba(255, 255, 255, 0.57);
+  outline-offset: 2px;
+
+  &__square {
+    border: 1px solid navy;
+
+    &--ship {
+      background-color: rgb(104, 102, 102);
+      border: 2px solid rgba(255, 255, 255, 0.87);
+    }
+    &--miss {
+      background-color: pink;
+    }
+    &--hit {
+      background-color: red;
+    }
+    &--water {
+      background-color: lightblue;
+    }
+  }
+}
